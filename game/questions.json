@@ -1,0 +1,166 @@
+{
+  "easy": [
+    {
+      "id": "e1",
+      "question": "Con gì đập thì sống, không đập thì chết?",
+      "options": ["Con tim", "Con muỗi", "Con cua", "Con cá"],
+      "answer": 0,
+      "hint": "Nằm trong lồng ngực của bạn đấy!",
+      "explanation": "Quả tim đập thì con người và động vật mới sống."
+    },
+    {
+      "id": "e2",
+      "question": "Cái gì đen khi bạn mua nó, đỏ khi dùng nó, và xám xịt khi vứt nó đi?",
+      "options": ["Than củi", "Bút chì", "Cục tẩy", "Bật lửa"],
+      "answer": 0,
+      "hint": "Dùng để nướng thịt, nấu nướng hoặc sưởi ấm.",
+      "explanation": "Than khi mua có màu đen, khi đốt đỏ rực, khi tàn thành tro màu xám."
+    },
+    {
+      "id": "e3",
+      "question": "Bệnh gì bác sĩ bó tay hoàn toàn?",
+      "options": ["Bệnh gãy tay", "Bệnh cảm cúm", "Bệnh đau mắt", "Bệnh đau bụng"],
+      "answer": 0,
+      "hint": "Phải dùng bột thạch cao hoặc nẹp cố định cánh tay lại.",
+      "explanation": "Gãy tay thì bác sĩ phải 'bó tay' lại để xương mau lành."
+    },
+    {
+      "id": "e4",
+      "question": "Mặt trời mọc ở hướng nào và lặn ở hướng nào?",
+      "options": ["Đông - Tây", "Tây - Đông", "Nam - Bắc", "Bắc - Nam"],
+      "answer": 0,
+      "hint": "Phía biển Đông đón bình minh đầu tiên.",
+      "explanation": "Do Trái Đất quay từ Tây sang Đông nên ta thấy Mặt trời mọc ở hướng Đông và lặn ở hướng Tây."
+    },
+    {
+      "id": "e5",
+      "question": "Cái gì tay trái cầm được mà tay phải không bao giờ cầm được?",
+      "options": ["Khuỷu tay phải", "Điện thoại", "Cây bút", "Cốc nước"],
+      "answer": 0,
+      "hint": "Một bộ phận trên chính cánh tay phải của bạn.",
+      "explanation": "Tay phải không thể tự cầm vào cổ tay hoặc khuỷu tay của chính nó."
+    },
+    {
+      "id": "e6",
+      "question": "Lịch nào dài nhất trên thế giới?",
+      "options": ["Lịch sử", "Lịch vạn niên", "Lịch treo tường", "Lịch để bàn"],
+      "answer": 0,
+      "hint": "Gắn liền với quá trình hình thành và phát triển của nhân loại.",
+      "explanation": "'Lịch sử' trải dài hàng triệu năm từ thời nguyên thủy đến nay."
+    },
+    {
+      "id": "e7",
+      "question": "Con cua đỏ dài 10cm chạy đua với con cua xanh dài 15cm, con nào về đích trước?",
+      "options": ["Con cua xanh", "Con cua đỏ", "Hòa nhau", "Cả hai không chạy"],
+      "answer": 0,
+      "hint": "Cua luộc chín thì có màu gì nhỉ?",
+      "explanation": "Con cua màu đỏ là cua đã bị luộc chín rồi, làm sao chạy được nữa!"
+    },
+    {
+      "id": "e8",
+      "question": "Quần rộng nhất là quần gì?",
+      "options": ["Quần đảo", "Quần bò", "Quần đùi", "Quần thun"],
+      "answer": 0,
+      "hint": "Là tập hợp nhiều hòn đảo trên biển.",
+      "explanation": "Quần đảo rộng hàng nghìn kilomet vuông (ví dụ quần đảo Hoàng Sa, Trường Sa)."
+    },
+    {
+      "id": "e9",
+      "question": "Trong tiếng Việt, từ nào mà 100% người Việt Nam đều phát âm sai?",
+      "options": ["Từ 'Sai'", "Từ 'Đúng'", "Từ 'Không'", "Từ 'Khó'"],
+      "answer": 0,
+      "hint": "Đọc chính xác chữ đó ra xem nào.",
+      "explanation": "Từ 'Sai' thì ai cũng phải phát âm là 'Sai'."
+    },
+    {
+      "id": "e10",
+      "question": "Cái gì càng bớt đi thì lại càng to ra?",
+      "options": ["Cái hố / Cái lỗ", "Cái bánh", "Đống rơm", "Đám mây"],
+      "answer": 0,
+      "hint": "Bạn đào bớt đất đi thì nó thế nào?",
+      "explanation": "Càng đào bớt đất ra thì cái hố càng to."
+    }
+  ],
+  "hard": [
+    {
+      "id": "h1",
+      "question": "Một người nông dân có 17 con cừu. Trừ 9 con chạy thoát, số còn lại bị chết hết. Hỏi người đó còn lại bao nhiêu con cừu?",
+      "options": ["9 con", "8 con", "17 con", "0 con"],
+      "answer": 0,
+      "hint": "Đọc thật kỹ chữ 'Trừ 9 con...'",
+      "explanation": "'Trừ 9 con (còn sống)', những con khác chết hết, vậy người đó còn đúng 9 con cừu sống!"
+    },
+    {
+      "id": "h2",
+      "question": "Cái gì có cổ nhưng không có miệng, có đáy nhưng không có chân?",
+      "options": ["Cái chai", "Con hươu cao cổ", "Cái áo sơ mi", "Cây đàn guitar"],
+      "answer": 0,
+      "hint": "Vật dụng dùng để đựng nước, nước ngọt hoặc rượu.",
+      "explanation": "Cái chai có cổ chai, đáy chai, miệng chai rót nước nhưng không có miệng ăn."
+    },
+    {
+      "id": "h3",
+      "question": "Bạn đang chạy đua marathon. Nếu bạn vượt qua người đang ở vị trí thứ hai, bạn đang ở vị trí thứ mấy?",
+      "options": ["Thứ hai", "Thứ nhất", "Thứ ba", "Chưa xác định"],
+      "answer": 0,
+      "hint": "Bạn chiếm vị trí của người bạn vừa vượt qua.",
+      "explanation": "Vượt qua người thứ 2 thì bạn sẽ thế chỗ họ ở vị trí thứ 2, người dẫn đầu vẫn là người thứ nhất!"
+    },
+    {
+      "id": "h4",
+      "question": "Bố của Mary có 5 người con gái: 1. Nana, 2. Nene, 3. Nini, 4. Nono. Hỏi người con gái thứ 5 tên là gì?",
+      "options": ["Mary", "Nunu", "Nana", "Nina"],
+      "answer": 0,
+      "hint": "Xem lại câu mở đầu: 'Bố của ai...?'",
+      "explanation": "Câu hỏi đã nói rõ: 'Bố của Mary có 5 người con gái', vậy người thứ 5 chính là Mary!"
+    },
+    {
+      "id": "h5",
+      "question": "Cây cầu chịu tải trọng tối đa 10 tấn. Một xe tải chở hàng nặng đúng 10 tấn chạy qua. Giữa cầu có chim bồ câu 200g đậu lên xe. Cầu có sập không?",
+      "options": ["Không sập", "Sập ngay lập tức", "Chờ chim bay đi", "Tùy loại xe"],
+      "answer": 0,
+      "hint": "Xe chạy từ đầu cầu đến giữa cầu thì nhiên liệu (xăng/dầu) thế nào?",
+      "explanation": "Xe chạy một quãng đường đã tiêu hao xăng dầu (nặng vài kg), nên trọng lượng giảm nhiều hơn khối lượng 200g của chú chim."
+    },
+    {
+      "id": "h6",
+      "question": "Nếu 3 con mèo bắt được 3 con chuột trong 3 phút, thì cần bao nhiêu con mèo để bắt được 100 con chuột trong 100 phút?",
+      "options": ["3 con mèo", "100 con mèo", "33 con mèo", "1 con mèo"],
+      "answer": 0,
+      "hint": "1 con mèo mất bao nhiêu phút để bắt 1 con chuột?",
+      "explanation": "3 con mèo bắt 3 con chuột trong 3 phút => trung bình 3 con mèo cứ 3 phút bắt 3 chuột. Trong 100 phút, 3 con mèo sẽ bắt được đúng 100 con chuột!"
+    },
+    {
+      "id": "h7",
+      "question": "Tôi có những thành phố nhưng không có nhà cửa, có những khu rừng nhưng không có cây cối, có dòng sông nhưng không có nước. Tôi là ai?",
+      "options": ["Bản đồ địa lý", "Bức tranh trừu tượng", "Giấc mơ", "Trò chơi điện tử"],
+      "answer": 0,
+      "hint": "Vật dụng dùng để tra cứu đường đi hoặc định vị địa lý.",
+      "explanation": "Trên tấm bản đồ thể hiện đầy đủ thành phố, rừng, sông ngòi nhưng chỉ là hình vẽ và ký hiệu."
+    },
+    {
+      "id": "h8",
+      "question": "Hai người cha và hai người con cùng đi câu cá. Mỗi người câu được một con cá. Nhưng khi đếm lại giỏ chỉ có tổng cộng 3 con cá. Tại sao?",
+      "options": ["Có 3 người: Ông nội, Bố và Con trai", "Một con cá bị rơi xuống nước", "Có một người không câu", "Họ tính nhầm"],
+      "answer": 0,
+      "hint": "Mối quan hệ 3 thế hệ trong một gia đình.",
+      "explanation": "Có 3 người: Ông nội (cha của bố), Bố (vừa là con của ông vừa là cha của con trai), và Cháu trai (con). Đó là 2 người cha và 2 người con!"
+    },
+    {
+      "id": "h9",
+      "question": "Cái gì mà người làm ra nó không dùng, người mua nó không dùng, còn người dùng nó lại không bao giờ nhìn thấy?",
+      "options": ["Quan tài", "Mắt kính", "Bóng đèn", "Đôi giày"],
+      "answer": 0,
+      "hint": "Một vật dụng trong tang lễ.",
+      "explanation": "Thợ đóng quan tài không dùng, người thân mua cho người đã khuất, người nằm trong đó không thấy được."
+    },
+    {
+      "id": "h10",
+      "question": "Có một đàn vịt: 2 con đi trước 2 con, 2 con đi sau 2 con, 2 con đi giữa 2 con. Hỏi đàn vịt có ít nhất bao nhiêu con?",
+      "options": ["4 con vịt", "6 con vịt", "8 con vịt", "2 con vịt"],
+      "answer": 0,
+      "hint": "Hãy xếp các con vịt theo hàng dọc.",
+      "explanation": "Chỉ cần 4 con vịt đi theo hàng dọc: con 1 và 2 đi trước con 3 và 4; con 3 và 4 đi sau con 1 và 2; con 2 và 3 đi giữa con 1 và 4."
+    }
+  ]
+}

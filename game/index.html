@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trò Chơi Câu Đố Trí Tuệ — Thách Thức Máy Tính</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-glow"></div>
+  
+  <main class="game-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo-area">
+        <span class="logo-icon">🧠</span>
+        <h1 class="logo-text">AI QUIZ MASTER</h1>
+      </div>
+      <div class="sound-toggle">
+        <button id="sound-btn" class="icon-btn" title="Bật/Tắt âm thanh">🔊</button>
+      </div>
+    </header>
+
+    <!-- Màn hình Menu bắt đầu -->
+    <section id="screen-menu" class="screen active">
+      <div class="hero-card">
+        <div class="host-avatar pulse">🤖</div>
+        <h2 class="hero-title">Đố Vui Trí Tuệ: Thách Thức Máy Tính</h2>
+        <p class="hero-desc">
+          Máy tính đã chuẩn bị những câu đố mẹo xoắn não nhất dành cho bạn! Hãy chọn cấp độ thử thách để bắt đầu:
+        </p>
+
+        <div class="level-selection">
+          <button id="btn-easy" class="level-card easy" onclick="startGame('easy')">
+            <div class="level-badge">🟢 CẤP ĐỘ DỄ</div>
+            <div class="level-name">Tập Sự Thông Thái</div>
+            <ul class="level-perks">
+              <li>✨ Câu đố gần gũi, dí dỏm</li>
+              <li>❤️ Có 3 mạng dự trữ</li>
+              <li>⏱️ 25 giây mỗi câu</li>
+              <li>💡 Có quyền 50/50 & Gợi ý</li>
+            </ul>
+            <span class="btn-play">Bắt Đầu Chơi →</span>
+          </button>
+
+          <button id="btn-hard" class="level-card hard" onclick="startGame('hard')">
+            <div class="level-badge">🔥 CẤP ĐỘ KHÓ</div>
+            <div class="level-name">Bậc Thầy Hack Não</div>
+            <ul class="level-perks">
+              <li>💥 Câu đố bẫy logic sâu, đánh lừa tư duy</li>
+              <li>❤️ Chỉ 1 mạng duy nhất (Sai là Game Over)</li>
+              <li>⏱️ 15 giây đếm ngược nghẹt thở</li>
+              <li>🚫 Không có quyền trợ giúp</li>
+            </ul>
+            <span class="btn-play">Chinh Phục Ngay →</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Màn hình Chơi Game -->
+    <section id="screen-quiz" class="screen">
+      <!-- HUD Trạng thái -->
+      <div class="quiz-hud">
+        <div class="hud-item">
+          <span class="hud-label">MẠNG</span>
+          <div id="hud-lives" class="hud-value lives">❤️❤️❤️</div>
+        </div>
+
+        <div class="hud-item center-timer">
+          <div class="timer-circle">
+            <svg class="timer-svg" viewBox="0 0 40 40">
+              <circle class="timer-bg" cx="20" cy="20" r="16"></circle>
+              <circle id="timer-stroke" class="timer-progress" cx="20" cy="20" r="16"></circle>
+            </svg>
+            <span id="timer-text" class="timer-number">25</span>
+          </div>
+        </div>
+
+        <div class="hud-item right-stat">
+          <span class="hud-label">ĐIỂM SỐ</span>
+          <span id="hud-score" class="hud-value score">0</span>
+        </div>
+      </div>
+
+      <!-- Khung Câu hỏi -->
+      <div class="question-card">
+        <div class="question-meta">
+          <span id="question-progress" class="badge-pill">Câu 1/7</span>
+          <span id="question-difficulty" class="badge-pill diff-easy">DỄ</span>
+          <span id="streak-badge" class="badge-pill streak-pill" style="display: none;">🔥 Combo x2</span>
+        </div>
+
+        <div class="bot-dialogue-box">
+          <span class="bot-mini-avatar" id="bot-mood">🤖</span>
+          <p id="bot-comment" class="bot-text">"Hãy xem bạn có vượt qua được câu này của tôi không!"</p>
+        </div>
+
+        <h3 id="question-text" class="question-title">Đang tải câu hỏi...</h3>
+
+        <!-- Gợi ý nếu có -->
+        <div id="hint-box" class="hint-box" style="display: none;">
+          <span class="hint-icon">💡</span>
+          <span id="hint-text" class="hint-content">Gợi ý ở đây</span>
+        </div>
+
+        <!-- 4 Lựa chọn -->
+        <div id="options-grid" class="options-grid">
+          <!-- Render tự động bởi JS -->
+        </div>
+
+        <!-- Thanh trợ giúp (Lifelines) -->
+        <div class="lifeline-bar" id="lifeline-bar">
+          <button id="btn-lifeline-5050" class="btn-lifeline" onclick="use5050()">
+            <span class="lifeline-icon">🪄</span> 50 / 50 (<span id="count-5050">1</span>)
+          </button>
+          <button id="btn-lifeline-hint" class="btn-lifeline" onclick="useHint()">
+            <span class="lifeline-icon">💡</span> Gợi Ý (<span id="count-hint">2</span>)
+          </button>
+        </div>
+      </div>
+
+      <!-- Khung Giải thích & Tiếp tục -->
+      <div id="feedback-drawer" class="feedback-drawer" style="display: none;">
+        <div class="feedback-content">
+          <div id="feedback-icon" class="feedback-emoji">✅</div>
+          <div class="feedback-info">
+            <h4 id="feedback-title" class="feedback-heading">Chính xác!</h4>
+            <p id="feedback-explanation" class="feedback-text">Giải thích chi tiết câu đố...</p>
+          </div>
+        </div>
+        <button id="btn-next-question" class="btn-next" onclick="nextQuestion()">Tiếp Tục →</button>
+      </div>
+    </section>
+
+    <!-- Màn hình Tổng Kết (Game Over / Victory) -->
+    <section id="screen-result" class="screen">
+      <div class="result-card">
+        <div id="result-trophy" class="result-trophy">🏆</div>
+        <h2 id="result-title" class="result-title">Hoàn Thành Thử Thách!</h2>
+        <p id="result-bot-msg" class="result-sub">Máy tính đã ghi nhận màn thể hiện của bạn!</p>
+
+        <div class="result-stats-grid">
+          <div class="stat-box">
+            <span class="stat-label">Tổng Điểm</span>
+            <span id="res-score" class="stat-val highlight">150</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Đúng / Tổng</span>
+            <span id="res-accuracy" class="stat-val">6/7</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Chuỗi Đúng Tối Đa</span>
+            <span id="res-streak" class="stat-val">🔥 4</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Xếp Hạng</span>
+            <span id="res-rank" class="stat-val rank-val">Cao Thủ</span>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn-primary" onclick="restartGame()">Chơi Lại Vòng Này 🔄</button>
+          <button class="btn-secondary" onclick="backToMenu()">Đổi Cấp Độ ⚙️</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="sound.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
