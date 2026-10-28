@@ -57,3 +57,15 @@ game/
 ├── sound.js          # Hệ thống âm thanh Web Audio API
 └── README.md         # Hướng dẫn chơi
 ```
+
+
+---
+
+## 📚 StudyClaw Mini — Trợ lý học tập bằng OpenClaw
+
+Trong thư mục [`studyclaw/`](studyclaw/README.md) có một demo riêng giúp:
+- Tóm tắt nội dung học tập.
+- Giải thích kiến thức bằng tiếng Việt.
+- Nhập văn bản hoặc chọn tệp TXT/Markdown và nhận kết quả từ OpenClaw Agent.
+
+**Chạy demo:** xem hướng dẫn tại [`studyclaw/README.md`](studyclaw/README.md). Cần cài đặt và cấu hình OpenClaw trước khi chạy.
