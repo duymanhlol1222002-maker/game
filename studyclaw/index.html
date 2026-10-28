@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>StudyClaw Mini — Trợ lý học tập</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="StudyClaw Mini trang chủ">
+        <span class="brand-icon">S</span>
+        <span>StudyClaw <small>MINI</small></span>
+      </a>
+      <span class="status"><i></i> Trợ lý học tập</span>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">HỌC HIỆU QUẢ HƠN VỚI AI</div>
+      <h1>Biến tài liệu thành<br><span>kiến thức dễ hiểu.</span></h1>
+      <p>Tóm tắt bài học hoặc hỏi AI giải thích một khái niệm — bằng tiếng Việt, rõ ràng và dễ ôn tập.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="tabs" role="tablist" aria-label="Chọn chức năng">
+        <button class="tab active" data-mode="summarize" role="tab" aria-selected="true">✦ Tóm tắt tài liệu</button>
+        <button class="tab" data-mode="explain" role="tab" aria-selected="false">☰ Giải thích kiến thức</button>
+      </div>
+
+      <form id="study-form">
+        <label id="input-label" for="study-input">Nội dung bài học</label>
+        <textarea id="study-input" maxlength="100000" placeholder="Dán nội dung bài học vào đây..." required></textarea>
+        <div class="input-footer">
+          <label class="upload" for="file-input">＋ Chọn tệp .txt / .md</label>
+          <input id="file-input" type="file" accept=".txt,.md,.text,text/plain,text/markdown">
+          <span id="char-count">0 ký tự</span>
+        </div>
+        <div class="options" id="summary-options">
+          <label for="length-select">Độ dài bản tóm tắt</label>
+          <select id="length-select">
+            <option value="ngắn">Ngắn gọn</option>
+            <option value="vừa" selected>Vừa phải</option>
+            <option value="chi tiết">Chi tiết</option>
+          </select>
+        </div>
+        <button class="submit" id="submit-button" type="submit">
+          <span id="button-text">Tóm tắt tài liệu</span><span aria-hidden="true">→</span>
+        </button>
+      </form>
+
+      <section id="result-panel" class="result-panel" hidden aria-live="polite">
+        <div class="result-heading">
+          <div><span class="result-kicker">KẾT QUẢ</span><h2 id="result-title">Bản tóm tắt</h2></div>
+          <button id="copy-button" class="copy-button" type="button">Sao chép</button>
+        </div>
+        <div id="result-content" class="result-content"></div>
+      </section>
+
+      <div id="error-message" class="error" role="alert" hidden></div>
+    </section>
+
+    <footer>
+      <span>StudyClaw Mini · Bản demo học tập</span>
+      <span>Chạy cục bộ qua OpenClaw</span>
+    </footer>
+  </main>
+  <script src="/app.js" defer></script>
+</body>
+</html>
